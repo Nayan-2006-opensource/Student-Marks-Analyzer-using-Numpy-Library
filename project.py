@@ -93,7 +93,7 @@ for i in range(len(student)):
 
 #standard deviation of each student
 for i in range(len(student)):
-    total=np.var(marks,axis=1)
+    total=np.std(marks,axis=1)
     print("The Standard deviation of each",student[i],"=",total[i])
 
 
