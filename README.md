@@ -13,8 +13,6 @@ A Python project that analyzes student marks using the NumPy library. The projec
 - Pass/Fail analysis
 - Student ranking
 - Display the top 3 and bottom 3 students
-- Grade calculation
-- Grade distribution
 - Median and standard deviation for each subject
 
 ## Technologies Used
