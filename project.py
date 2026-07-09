@@ -27,3 +27,35 @@ print("the highest scorer in the class is",student[high])
 
 low=np.argmin(total)
 print("the lowest scorer in the class is",student[low])
+
+
+#class average
+class_avg=np.mean(total)
+print("the avg of the class is ",class_avg)
+
+#subject wise analysis
+
+#sub wise highest and lowest marks marks
+for i in range(len(subject)):
+    arr=marks[:,i]
+    a=marks[:,i]
+    max_score=np.argmax(arr)
+    min_score=np.argmin(a)
+    print("the highest score in",subject[i],"is ",arr[max_score])
+    
+    print("the lowest score in",subject[i],"is",a[min_score])
+
+ #Average  of each subject
+
+for i in range(len(subject)):
+    avg_marks=marks[:,i]
+    Average=np.mean(avg_marks)
+    print("the average marks in subject",subject[i],"=",Average)
+
+    
+#hardest and easiest subject
+total=np.mean(marks,axis=0)
+hardest=np.argmin(total)
+print("the hardest subject is",subject[hardest],"having average of",total[hardest])
+easiest=np.argmax(total)
+print("the easiest subject is",subject[easiest],"having average of",total[easiest])
