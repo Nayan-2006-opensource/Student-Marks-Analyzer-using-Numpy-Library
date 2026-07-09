@@ -59,3 +59,45 @@ hardest=np.argmin(total)
 print("the hardest subject is",subject[hardest],"having average of",total[hardest])
 easiest=np.argmax(total)
 print("the easiest subject is",subject[easiest],"having average of",total[easiest])
+
+
+
+# best and worst subject of each student
+for i in range(len(student)):
+    total=marks[i,:]
+    best=np.argmax(total)
+    worst=np.argmin(total)
+    print("the best subject of",student[i],"is",subject[best],"having score",total[best])
+    print("the worst subject of",student[i],"is",subject[worst],"having score",total[worst])
+
+
+#ranking system
+total = np.sum(marks, axis=1)
+
+order = np.argsort(total)[::-1]   # Highest marks first
+
+rank = np.empty(len(student), dtype=int)
+
+for i in range(len(student)):
+    rank[order[i]] = i + 1
+
+for i in range(len(student)):
+    print(student[i], "has total", total[i], "and Rank", rank[i])
+
+
+# median marks of each student
+for i in range(len(student)):
+    total=np.median(marks,axis=1)
+    print("the median marks of ",student[i],"=",total[i])
+
+
+#standard deviation of each student
+for i in range(len(student)):
+    total=np.var(marks,axis=1)
+    print("The Standard deviation of each",student[i],"=",total[i])
+
+
+#cumsum of each student
+for i in range(len(student)):
+    total=np.cumsum(marks,axis=1)
+    print("The cumsum of each",student[i],"=",total[i])
