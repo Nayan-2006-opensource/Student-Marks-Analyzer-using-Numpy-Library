@@ -101,3 +101,21 @@ for i in range(len(student)):
 for i in range(len(student)):
     total=np.cumsum(marks,axis=1)
     print("The cumsum of each",student[i],"=",total[i])
+
+
+#subject wise toppers
+for i in range(len(subject)):
+    total=marks[:,i]
+    maximum=np.argmax(total)
+    print("the student topper is",student[maximum],"with score",total[maximum],"in subject",subject[i])
+
+
+#pass/fail analysis
+for i in range(len(student)):
+    print("\n", student[i])
+
+    for j in range(len(subject)):
+        if marks[i, j] >= 33:
+            print(subject[j], ":", marks[i, j], "-> Pass")
+        else:
+            print(subject[j], ":", marks[i, j], "-> Fail")
