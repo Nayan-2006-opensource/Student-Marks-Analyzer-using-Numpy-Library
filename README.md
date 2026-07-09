@@ -46,7 +46,7 @@ The marks are stored in a **15 × 5 NumPy array**, where each row represents a s
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/Student-Marks-Analyzer.git
+git clone : https://github.com/Nayan-2006-opensource/Student-Marks-Analyzer-using-Numpy-Library
 ```
 
 2. Install NumPy.
