@@ -16,3 +16,14 @@ total=marks.sum(axis=1) #total marks of each student
 print(total)
 for i in range(len(total)):
     print("total marks of student",student[i],"is",total[i])
+
+percentage=total/5 #percentage of each student
+for i in range(len(percentage)):
+    print("percentage of student",student[i],"is",percentage[i])
+
+#highest and lowest scorer
+high=np.argmax(total)
+print("the highest scorer in the class is",student[high])
+
+low=np.argmin(total)
+print("the lowest scorer in the class is",student[low])
